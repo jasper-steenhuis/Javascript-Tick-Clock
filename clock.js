@@ -1,15 +1,12 @@
-window.onload = function() {
-    clock();
-}
 function clock() {
-    var hours = document.getElementById("hours");
-    var minutes = document.getElementById("minutes");
-    var seconds = document.getElementById("seconds");
     var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var time = document.getElementById("time");
 
-    hours.innerHTML = date.getHours();
-    minutes.innerHTML = date.getMinutes();
-    seconds.innerHTML = date.getSeconds();
+    time.innerHTML = hours + " : " + minutes + " : " + seconds;
     
     setTimeout(clock,1000);
 };
+clock();
